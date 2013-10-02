@@ -15,7 +15,7 @@ Gem::Specification.new do |s|
 
   s.rdoc_options = [ '--charset=UTF-8' ]
 
-  s.files         = Dir['lib/**/*'] + Dir['*.rb']
+  s.files         = Dir['lib/**/*'] + Dir['*.rb'] + Dir['tasks/*.rake']
   s.files        += %w[ README.rdoc LICENSE CHANGES ]
 
   s.require_paths    = [ 'lib' ]
