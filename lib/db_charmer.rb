@@ -206,3 +206,5 @@ else
   # Open up really useful API method
   ActiveRecord::AssociationPreload::ClassMethods.send(:public, :preload_associations)
 end
+
+require 'db_charmer/railtie' if DbCharmer.running_with_rails?
