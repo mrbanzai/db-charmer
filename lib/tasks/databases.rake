@@ -1,3 +1,5 @@
+require 'active_record/tasks/database_tasks'
+
 namespace :db_charmer do
   namespace :create do
     desc 'Create all the local databases defined in config/database.yml'
@@ -80,3 +82,10 @@ def drop_core_and_sub_database(config)
   end
 end
 
+def drop_database(config)
+  ActiveRecord::Tasks::DatabaseTasks.drop(config)
+end
+
+def create_database
+  ActiveRecord::Tasks::DatabaseTasks.create(config)
+end
